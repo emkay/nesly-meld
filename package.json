@@ -1,0 +1,24 @@
+{
+  "name": "nesly-meld",
+  "version": "0.0.0",
+  "description": "Meld a CHR back into a ROM",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/emkay/nesly-meld.git"
+  },
+  "keywords": [
+    "nesly",
+    "meld",
+    "chr"
+  ],
+  "author": "Michael Matuzak",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/emkay/nesly-meld/issues"
+  },
+  "homepage": "https://github.com/emkay/nesly-meld"
+}
