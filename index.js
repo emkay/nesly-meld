@@ -1,9 +1,17 @@
-var through = require('through');
+var ns = require('nesly-split');
 var fs = require('fs');
 
-var chr = fs.createReadStream('smb.chr');
-var rom = fs.createWriteStream('smb.nes');
+var Buffer = require('buffer').Buffer;
 
-function write(chunk) {}
 
-chr.pipe(through(write, end));
+fs.open(__dirname + '/smb.nes', 'r', function (err, fd) {
+    var buffer = new Buffer(8192);
+
+    if (!err) {
+        fs.read(fd, buffer, 0, 8192, 1024 * 8, function (err, bytesRead, buf) {
+            console.log(err);
+            console.log(bytesRead);
+            console.log(buffer);
+        });
+    }
+});
