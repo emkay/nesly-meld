@@ -22,7 +22,6 @@
   },
   "homepage": "https://github.com/emkay/nesly-meld",
   "dependencies": {
-    "nesly-split": "^0.3.0",
-    "through": "^2.3.4"
+    "nesly-split": "^0.8.0"
   }
 }
