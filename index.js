@@ -15,7 +15,8 @@ module.exports = function (file, newChr, cb) {
 
         fs.readFile(newChr, function (error, chrBuf) {
             if (!error) {
-                rom.write(chrBuf.toString(), start, size);
+                var oldChr = rom.slice(start, start + size);
+                chrBuf.copy(oldChr);
                 cb(null, rom);
             }
         });
